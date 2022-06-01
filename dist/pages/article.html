@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title> 標題</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://unpkg.com/swiper@4.3.3/dist/js/swiper.js"></script>
+    <script src="https://unpkg.com/vue-awesome-swiper@3.1.3/dist/vue-awesome-swiper.js"></script>
+  <script src="../js/main.js?5bb41345e578810ac211" defer></script><link href="../css/main.css?5bb41345e578810ac211" rel="stylesheet"></head>
+  <body>
+    <main>
+      <!--<!------------------------- header------------------------->
+      <header class="header nav-wrap" id="nav">
+        <div class="content">
+          <div class="nav"><a href="./index.html" class="nav_logo"><img alt src="https://ppt.cc/fFsAAx@.png"></a>
+            <ul class="nav_list">
+              <li class="nav_item"><a href="./index.html">首頁</a></li>
+              <li class="nav_item"><a href class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" id="dropdownMenuButton1" type="button">房型介紹</a>
+                <ul class="dropdown-menu nav_dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li class="nav_dropdown-menu-item"><a href="./index.html#taipei" class="dropdown-item">台北防疫旅館</a></li>
+                  <li class="nav_dropdown-menu-item"><a href="./index.html#newtaipei" class="dropdown-item">新北防疫旅館</a></li>
+                  <li class="nav_dropdown-menu-item"><a href="./index.html#taicheng" class="dropdown-item">台中防疫旅館</a></li>
+                  <li class="nav_dropdown-menu-item"><a href="./index.html#tainan" class="dropdown-item">台南防疫旅館</a></li>
+                  <li class="nav_dropdown-menu-item"><a href="./index.html#kaohsiung" class="dropdown-item">高雄防疫旅館</a></li>
+                </ul>
+              </li>
+              <li class="nav_item"><a href="./article.html">防疫補助</a></li>
+              <li class="nav_item"><a href="./index.html#news">防疫全攻略</a></li>
+              <li class="nav_item"><a href="./article.html">最新消息</a></li>
+              <li class="nav_item"><a href="./Q&amp;A.html">防疫旅館Q&A</a></li>
+              <li class="nav_item"><a href="./contactus.html">聯絡我們</a></li>
+            </ul>
+            <div class="moveMenu" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"><i class="bi bi-justify"></i></div>
+            <div class="moveMenuWrap offcanvas offcanvas-top" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" tabindex="-1">
+              <div class="moveMenu-header offcanvas-header">
+                <div class="nav_logo_move"><img alt src="https://ppt.cc/fFsAAx@.png"></div>
+                <button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas" type="button"></button>
+              </div>
+              <div class="moveMenu-body">
+                <ul class="nav_list_move">
+                  <li class="nav_list_move_item"><a href="./index.html" class="nav_list_move_item_link">首頁</a></li>
+                  <li class="accordion-button" aria-expanded="true" data-bs-target="#nav_list_move_item_collapse" data-bs-toggle="collapse" type="button">房型介紹</li>
+                  <div class="accordion-collapse collapse show" id="nav_list_move_item_collapse" aria-labelledby="headingOne"> 
+                    <div class="nav_list_move_item_collapse-item" aria-label="Close" data-bs-dismiss="offcanvas" type="button"><a href="./index.html#taipei" class="nav_list_move_item_collapse-link">台北防疫旅館</a></div>
+                    <div class="nav_list_move_item_collapse-item" aria-label="Close" data-bs-dismiss="offcanvas" type="button"><a href="./index.html#newtaipei" class="nav_list_move_item_collapse-link">新北防疫旅館</a></div>
+                    <div class="nav_list_move_item_collapse-item" aria-label="Close" data-bs-dismiss="offcanvas" type="button"><a href="./index.html#taicheng" class="nav_list_move_item_collapse-link">台中防疫旅館</a></div>
+                    <div class="nav_list_move_item_collapse-item" aria-label="Close" data-bs-dismiss="offcanvas" type="button"><a href="./index.html#tainan" class="nav_list_move_item_collapse-link">台南防疫旅館</a></div>
+                    <div class="nav_list_move_item_collapse-item" aria-label="Close" data-bs-dismiss="offcanvas" type="button"><a href="./index.html#kaohsiung" class="nav_list_move_item_collapse-link">高雄防疫旅館</a></div>
+                  </div>
+                  <li class="nav_list_move_item"><a href="./article.html" class="nav_list_move_item_link">防疫補助</a></li>
+                  <li class="nav_list_move_item"><a href="./index.html#news" class="nav_list_move_item_link">防疫全攻略</a></li>
+                  <li class="nav_list_move_item"><a href="./article.html" class="nav_list_move_item_link">最新消息</a></li>
+                  <li class="nav_list_move_item"><a href="./Q&amp;A.html" class="nav_list_move_item_link">防疫旅館Q&A</a></li>
+                  <li class="nav_list_move_item"><a href="./contactus.html" class="nav_list_move_item_link">聯絡我們</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <header class="header">
+        <div class="content article-search-wrap">
+          <div class="input-group article-search"><span class="input-group-text" id="basic-addon1"> <i class="bi bi-search"></i></span>
+            <input aria-describedby="basic-addon1" aria-label="Username" class="form-control" placeholder="優惠資訊/旅遊" type="text">
+          </div>
+        </div>
+      </header>
+      <div class="wrap">
+        <div class="content">
+          <!--<!------------------------- slider ------------------------->
+          <div class="slider article-slider-for">
+            <div class="articleSwiper-swiper-slide-wrap">
+              <div class="article-slider-for-item">
+                <div class="articleSwiper-swiper-slide-pic"><img alt src="https://i.ibb.co/FDS0gHB/Rectangle-1.png"></div>
+                <div class="articleSwiper-swiper-slide-text">
+                  <p class="articleSwiper-title">機場搭防疫計程車我們付費</p>
+                  <p class="articleSwiper-text">現在只要預訂「台北市的防疫旅館」您的計程車費我來出! 14天防疫假期推出超優惠的方案</p><a href="" class="articleSwiper-btn">閱讀更多</a>
+                </div>
+              </div>
+            </div>
+            <div class="articleSwiper-swiper-slide-wrap">
+              <div class="article-slider-for-item">
+                <div class="articleSwiper-swiper-slide-pic"><img alt src="https://i.ibb.co/FDS0gHB/Rectangle-1.png"></div>
+                <div class="articleSwiper-swiper-slide-text">
+                  <p class="articleSwiper-title">2</p>
+                  <p class="articleSwiper-text">2</p><a href="" class="articleSwiper-btn">閱讀更多</a>
+                </div>
+              </div>
+            </div>
+            <div class="articleSwiper-swiper-slide-wrap">
+              <div class="article-slider-for-item">
+                <div class="articleSwiper-swiper-slide-pic"><img alt src="https://i.ibb.co/FDS0gHB/Rectangle-1.png"></div>
+                <div class="articleSwiper-swiper-slide-text">
+                  <p class="articleSwiper-title">3</p>
+                  <p class="articleSwiper-text">3</p><a href="" class="articleSwiper-btn">閱讀更多</a>
+                </div>
+              </div>
+            </div>
+            <div class="articleSwiper-swiper-slide-wrap">
+              <div class="article-slider-for-item">
+                <div class="articleSwiper-swiper-slide-pic"><img alt src="https://i.ibb.co/FDS0gHB/Rectangle-1.png"></div>
+                <div class="articleSwiper-swiper-slide-text">
+                  <p class="articleSwiper-title">4</p>
+                  <p class="articleSwiper-text">4</p><a href="" class="articleSwiper-btn">閱讀更多</a>
+                </div>
+              </div>
+            </div>
+            <div class="articleSwiper-swiper-slide-wrap">
+              <div class="article-slider-for-item">
+                <div class="articleSwiper-swiper-slide-pic"><img alt src="https://i.ibb.co/FDS0gHB/Rectangle-1.png"></div>
+                <div class="articleSwiper-swiper-slide-text">
+                  <p class="articleSwiper-title">5</p>
+                  <p class="articleSwiper-text">5</p><a href="" class="articleSwiper-btn">閱讀更多</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider article-slider-nav">
+            <div class="articleSwiper-swiper-slide-wrap">
+              <div class="article-slider-nav-item">
+                <p>【最新文章】機場搭防疫計程車我們付費！</p>
+              </div>
+            </div>
+            <div class="articleSwiper-swiper-slide-wrap">
+              <div class="article-slider-nav-item">
+                <p>2【最新文章】標題重點資訊活動更新優惠訊息</p>
+              </div>
+            </div>
+            <div class="articleSwiper-swiper-slide-wrap">
+              <div class="article-slider-nav-item">
+                <p>3【最新文章】標題重點資訊活動更新優惠訊息</p>
+              </div>
+            </div>
+            <div class="articleSwiper-swiper-slide-wrap">
+              <div class="article-slider-nav-item">
+                <p>4【最新文章】標題重點資訊活動更新優惠訊息</p>
+              </div>
+            </div>
+            <div class="articleSwiper-swiper-slide-wrap">
+              <div class="article-slider-nav-item">
+                <p>5【最新文章】標題重點資訊活動更新優惠訊息</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="article">
+            <!--<!------------------------- article-left ------------------------->
+            <div class="article-left"> 
+              <p class="article-class">最新文章</p>
+              <ul class="article-type-title-wrap">
+                <li class="article-type-title" @click="articleLeftTag = 0" :class="{articleActive:articleLeftTag==0}">
+                  <div class="article-type-title-box"> 
+                    <p>優惠資訊</p>
+                  </div>
+                </li>
+                <li class="article-type-title" @click="articleLeftTag = 1" :class="{articleActive:articleLeftTag==1}">
+                  <div class="article-type-title-box"> 
+                    <p>防疫資訊</p>
+                  </div>
+                </li>
+                <li class="article-type-title" @click="articleLeftTag = 2" :class="{articleActive:articleLeftTag==2}">
+                  <div class="article-type-title-box"> 
+                    <p>營養健康</p>
+                  </div>
+                </li>
+                <li class="article-type-title" @click="articleLeftTag = 3" :class="{articleActive:articleLeftTag==3}">
+                  <div class="article-type-title-box"> 
+                    <p>旅遊資訊</p>
+                  </div>
+                </li>
+              </ul>
+              <ul class="article-class-content">
+                <li class="article-class-content-item" v-show="articleLeftTag == 0">
+                  <div class="article-class-content-item-box">
+                    <div class="article-class-content-item-pic"><img alt src="https://i.ibb.co/FDS0gHB/Rectangle-1.png"></div>
+                    <div class="article-class-content-item-txt"> 
+                      <p class="article-class-content-item-tab">【優惠資訊】 </p>
+                      <p class="article-class-content-item-tit">機場搭防疫計程車我們付費，文章標題第二列  </p>
+                      <p class="article-class-content-item-subtxt">現在只要預訂「台北市的防疫旅館」您的計程車費我來出！內文現在只要預訂「台北市的防疫旅館」您的計程車費我來出！內文</p>
+                      <p class="article-class-content-item-footer"> <span class="article-class-content-item-footer-date">2022/05/30</span><a href="" class="article-class-content-item-footer-move"> <span>閱讀更多 </span><img alt="" src="https://ppt.cc/fQWIzx@.png"></a></p>
+                    </div>
+                  </div>
+                </li>
+                <li class="article-class-content-item" v-show="articleLeftTag == 0">
+                  <div class="article-class-content-item-box">
+                    <div class="article-class-content-item-pic"><img alt src="https://i.ibb.co/FDS0gHB/Rectangle-1.png"></div>
+                    <div class="article-class-content-item-txt"> 
+                      <p class="article-class-content-item-tab">【優惠資訊】 </p>
+                      <p class="article-class-content-item-tit">機場搭防疫計程車我們付費，文章標題第二列  </p>
+                      <p class="article-class-content-item-subtxt">現在只要預訂「台北市的防疫旅館」您的計程車費我來出！內文現在只要預訂「台北市的防疫旅館」您的計程車費我來出！內文</p>
+                      <p class="article-class-content-item-footer"> <span class="article-class-content-item-footer-date">2022/05/30</span><a href="" class="article-class-content-item-footer-move"> <span>閱讀更多 </span><img alt="" src="https://ppt.cc/fQWIzx@.png"></a></p>
+                    </div>
+                  </div>
+                </li>
+                <li class="moreBtn" @click="articleMore = !articleMore" v-show="articleLeftTag == 0"> <span>更多文章</span><img alt="" src="https://ppt.cc/fQWIzx@.png"></li>
+                <li class="article-class-content-item mt-35" v-show="articleLeftTag == 0" v-if="articleMore">
+                  <div class="article-class-content-item-box">
+                    <div class="article-class-content-item-pic"><img alt src="https://i.ibb.co/FDS0gHB/Rectangle-1.png"></div>
+                    <div class="article-class-content-item-txt"> 
+                      <p class="article-class-content-item-tab">【優惠資訊】 </p>
+                      <p class="article-class-content-item-tit">機場搭防疫計程車我們付費，文章標題第二列  </p>
+                      <p class="article-class-content-item-subtxt">現在只要預訂「台北市的防疫旅館」您的計程車費我來出！內文現在只要預訂「台北市的防疫旅館」您的計程車費我來出！內文</p>
+                      <p class="article-class-content-item-footer"> <span class="article-class-content-item-footer-date">2022/05/30</span><a href="" class="article-class-content-item-footer-move"> <span>閱讀更多 </span><img alt="" src="https://ppt.cc/fQWIzx@.png"></a></p>
+                    </div>
+                  </div>
+                </li>
+                <li v-show="articleLeftTag == 1">
+                  <p>防疫資訊</p>
+                </li>
+                <li v-show="articleLeftTag == 2">
+                  <p>營養健康</p>
+                </li>
+                <li v-show="articleLeftTag == 3">
+                  <p>旅遊資訊</p>
+                </li>
+              </ul>
+            </div>
+            <div class="article-right">
+              <p class="article-class">熱門議題</p>
+              <ul class="article-type-title-wrap">
+                <li class="article-type-title" @click="articleRightTag = 0" :class="{articleActive:articleRightTag==0}">
+                  <div class="article-type-title-box"> 
+                    <p>優惠資訊</p>
+                  </div>
+                </li>
+                <li class="article-type-title" @click="articleRightTag= 1" :class="{articleActive:articleRightTag==1}">
+                  <div class="article-type-title-box"> 
+                    <p>防疫資訊</p>
+                  </div>
+                </li>
+                <li class="article-type-title" @click="articleRightTag= 2" :class="{articleActive:articleRightTag==2}">
+                  <div class="article-type-title-box"> 
+                    <p>營養健康</p>
+                  </div>
+                </li>
+                <li class="article-type-title" @click="articleRightTag= 3" :class="{articleActive:articleRightTag==3}">
+                  <div class="article-type-title-box"> 
+                    <p>旅遊資訊</p>
+                  </div>
+                </li>
+              </ul>
+              <ul class="article-class-content">
+                <li class="article-class-content-item" v-show="articleRightTag== 0">
+                  <div class="article-class-content-item-box">
+                    <div class="article-class-content-item-pic"><img alt src="https://i.ibb.co/FDS0gHB/Rectangle-1.png"></div>
+                    <div class="article-class-content-item-txt"> 
+                      <p class="article-class-content-item-tab">【優惠資訊】 </p>
+                      <p class="article-class-content-item-tit">機場搭防疫計程車我們付費，文章標題第二列  </p>
+                      <p class="article-class-content-item-subtxt">現在只要預訂「台北市的防疫旅館」您的計程車費我來出！內文現在只要預訂「台北市的防疫旅館」您的計程車費我來出！內文</p>
+                      <p class="article-class-content-item-footer"> <span class="article-class-content-item-footer-date">2022/05/30</span><a href="" class="article-class-content-item-footer-move"> <span>閱讀更多 </span><img alt="" src="https://ppt.cc/fQWIzx@.png"></a></p>
+                    </div>
+                  </div>
+                </li>
+                <li class="article-class-content-item" v-show="articleRightTag== 0">
+                  <div class="article-class-content-item-box">
+                    <div class="article-class-content-item-pic"><img alt src="https://i.ibb.co/FDS0gHB/Rectangle-1.png"></div>
+                    <div class="article-class-content-item-txt"> 
+                      <p class="article-class-content-item-tab">【優惠資訊】 </p>
+                      <p class="article-class-content-item-tit">機場搭防疫計程車我們付費，文章標題第二列  </p>
+                      <p class="article-class-content-item-subtxt">現在只要預訂「台北市的防疫旅館」您的計程車費我來出！內文現在只要預訂「台北市的防疫旅館」您的計程車費我來出！內文</p>
+                      <p class="article-class-content-item-footer"> <span class="article-class-content-item-footer-date">2022/05/30</span><a href="" class="article-class-content-item-footer-move"> <span>閱讀更多 </span><img alt="" src="https://ppt.cc/fQWIzx@.png"></a></p>
+                    </div>
+                  </div>
+                </li>
+                <li v-show="articleRightTag== 1">
+                  <p>防疫資訊</p>
+                </li>
+                <li v-show="articleRightTag== 2">
+                  <p>營養健康</p>
+                </li>
+                <li v-show="articleRightTag== 3">
+                  <p>旅遊資訊</p>
+                </li>
+              </ul>
+              <div class="moreBtn"> <span>更多文章</span><img alt="" src="https://ppt.cc/fQWIzx@.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        new Vue({
+            el:'.wrap',
+            data(){
+                return{
+                    articleLeftTag:0,
+                    articleRightTag:0,
+                    articleMore:false
+                }
+        
+            }
+        })
+      </script>
+      <!-- <!------------------------- footer--------------------------->
+      <footer class="footer">
+        <div class="content">
+          <div class="footer_main">
+            <div class="footer_left"><img alt src="https://ppt.cc/fFsAAx@.png" class="footer_left_pic"><span class="footer_left_desc">您最佳的防疫旅館首選</span>
+              <ul class="footer_left_link_wrap">
+                <li class="footer_left_link"><a href="https://www.messenger.com/t/103521468250543/?messaging_source=source&amp;pages&amp;message_shortlink"><img alt src="../assets/footer/message_icon.png" class="footer_left_icon"></a></li>
+                <li class="footer_left_link"><a href="https://line.me/ti/p/@643ibjqd"><img alt src="../assets/footer/line_icon.png" class="footer_left_icon"></a></li>
+                <li class="footer_left_link"><a href><img alt src="../assets/footer/wechat_icon.png" class="footer_left_icon"></a></li>
+                <li class="footer_left_link"><a href><img alt src="../assets/footer/link_icon.png" class="footer_left_icon"></a></li>
+              </ul>
+            </div>
+            <div class="footer_right">
+              <ul class="footer_right_list">
+                <li class="footer_right_title">14Holidays</li>
+                <li class="footer_right_link"><a href="./contactus.html">關於我們</a></li>
+                <li class="footer_right_link"><a href="./index.html#taipei">房型介紹</a></li>
+                <li class="footer_right_link"><a href="./article.html">最新消息</a></li>
+              </ul>
+              <ul class="footer_right_list">
+                <li class="footer_right_title">防疫相關</li>
+                <li class="footer_right_link"><a href="./article.html">防疫補助</a></li>
+                <li class="footer_right_link"><a href="./index.html#news">防疫全攻略</a></li>
+                <li class="footer_right_link"><a href="./Q&amp;A.html">防疫旅館Q&A</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer_copy">Copyright © 2022 14天防疫假期|合法防疫旅館</div>
+        <div class="footer_top" aria-controls="footer_top_collapse" data-bs-toggle="collapse" href="#footer_top_collapse" role="button" aria-expanded="true"><img alt="" src="https://i.ibb.co/J260wBF/2022-06-01-8-23-08.png"></div>
+        <div class="footer_top_collapse collapse show" id="footer_top_collapse">
+          <div class="footer_top_collapse_link"><a href="#nav" class="footer_top_collapse_link_icon"> <img alt="" src="https://i.ibb.co/jHhHZXn/2022-06-01-8-23-01.png"></a></div>
+          <div class="footer_top_collapse_link"><a href="https://line.me/ti/p/@643ibjqd" class="footer_top_collapse_link_icon"><img alt="" src="https://i.ibb.co/W0Nt87s/2022-06-01-8-22-47.png"></a></div>
+          <div class="footer_top_collapse_link"><a href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F103521468250543%2F%3Fmessaging_source%3Dsource%26pages%26message_shortlink" class="footer_top_collapse_link_icon"><img alt="" src="https://i.ibb.co/nPH3xZZ/2022-06-01-8-22-28.png"></a></div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
