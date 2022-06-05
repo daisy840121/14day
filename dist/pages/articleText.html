@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title> 標題</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://unpkg.com/swiper@4.3.3/dist/js/swiper.js"></script>
+    <script src="https://unpkg.com/vue-awesome-swiper@3.1.3/dist/vue-awesome-swiper.js"></script>
+  <script src="../js/main.js?b55ad1407b3c8749a395" defer></script><link href="../css/main.css?b55ad1407b3c8749a395" rel="stylesheet"></head>
+  <body>
+    <main>
+      <!--<!------------------------- header------------------------->
+      <header class="header nav-wrap" id="nav">
+        <div class="content">
+          <div class="nav"><a href="./index.html" class="nav_logo"><img alt src="https://ppt.cc/fFsAAx@.png"></a>
+            <ul class="nav_list">
+              <li class="nav_item"><a href="./index.html">首頁</a></li>
+              <li class="nav_item"><a href class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" id="dropdownMenuButton1" type="button">房型介紹</a>
+                <ul class="dropdown-menu nav_dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li class="nav_dropdown-menu-item"><a href="./index.html#taipei" class="dropdown-item">台北防疫旅館</a></li>
+                  <li class="nav_dropdown-menu-item"><a href="./index.html#newtaipei" class="dropdown-item">新北防疫旅館</a></li>
+                  <li class="nav_dropdown-menu-item"><a href="./index.html#taicheng" class="dropdown-item">台中防疫旅館</a></li>
+                  <li class="nav_dropdown-menu-item"><a href="./index.html#tainan" class="dropdown-item">台南防疫旅館</a></li>
+                  <li class="nav_dropdown-menu-item"><a href="./index.html#kaohsiung" class="dropdown-item">高雄防疫旅館</a></li>
+                </ul>
+              </li>
+              <li class="nav_item"><a href="./article.html">防疫補助</a></li>
+              <li class="nav_item"><a href="./index.html#news">防疫全攻略</a></li>
+              <li class="nav_item"><a href="./article.html">最新消息</a></li>
+              <li class="nav_item"><a href="./Q&amp;A.html">防疫旅館Q&A</a></li>
+              <li class="nav_item"><a href="./contactus.html">聯絡我們</a></li>
+            </ul>
+            <div class="moveMenu" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"><i class="bi bi-justify"></i></div>
+            <div class="moveMenuWrap offcanvas offcanvas-top" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" tabindex="-1">
+              <div class="moveMenu-header offcanvas-header">
+                <div class="nav_logo_move"><img alt src="https://ppt.cc/fFsAAx@.png"></div>
+                <button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas" type="button"></button>
+              </div>
+              <div class="moveMenu-body">
+                <ul class="nav_list_move">
+                  <li class="nav_list_move_item"><a href="./index.html" class="nav_list_move_item_link">首頁</a></li>
+                  <li class="accordion-button" aria-expanded="true" data-bs-target="#nav_list_move_item_collapse" data-bs-toggle="collapse" type="button">房型介紹</li>
+                  <div class="accordion-collapse collapse show" id="nav_list_move_item_collapse" aria-labelledby="headingOne"> 
+                    <div class="nav_list_move_item_collapse-item" aria-label="Close" data-bs-dismiss="offcanvas" type="button"><a href="./index.html#taipei" class="nav_list_move_item_collapse-link">台北防疫旅館</a></div>
+                    <div class="nav_list_move_item_collapse-item" aria-label="Close" data-bs-dismiss="offcanvas" type="button"><a href="./index.html#newtaipei" class="nav_list_move_item_collapse-link">新北防疫旅館</a></div>
+                    <div class="nav_list_move_item_collapse-item" aria-label="Close" data-bs-dismiss="offcanvas" type="button"><a href="./index.html#taicheng" class="nav_list_move_item_collapse-link">台中防疫旅館</a></div>
+                    <div class="nav_list_move_item_collapse-item" aria-label="Close" data-bs-dismiss="offcanvas" type="button"><a href="./index.html#tainan" class="nav_list_move_item_collapse-link">台南防疫旅館</a></div>
+                    <div class="nav_list_move_item_collapse-item" aria-label="Close" data-bs-dismiss="offcanvas" type="button"><a href="./index.html#kaohsiung" class="nav_list_move_item_collapse-link">高雄防疫旅館</a></div>
+                  </div>
+                  <li class="nav_list_move_item"><a href="./article.html" class="nav_list_move_item_link">防疫補助</a></li>
+                  <li class="nav_list_move_item"><a href="./index.html#news" class="nav_list_move_item_link">防疫全攻略</a></li>
+                  <li class="nav_list_move_item"><a href="./article.html" class="nav_list_move_item_link">最新消息</a></li>
+                  <li class="nav_list_move_item"><a href="./Q&amp;A.html" class="nav_list_move_item_link">防疫旅館Q&A</a></li>
+                  <li class="nav_list_move_item"><a href="./contactus.html" class="nav_list_move_item_link">聯絡我們</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div id="fb-root"></div>
+      <script src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&amp;version=v14.0" defer async crossorigin="anonymous" nonce="S7UPSuxr"></script>
+      <header class="header">
+        <div class="content article-search-wrap">
+          <div class="input-group article-search"><span class="input-group-text" id="basic-addon1"> <i class="bi bi-search"></i></span>
+            <input aria-describedby="basic-addon1" aria-label="Username" class="form-control" placeholder="優惠資訊/旅遊" type="text">
+          </div>
+        </div>
+        <div class="articleText-move-search"><a href="./articlesearchmove.html"><i class="bi bi-search"></i></a></div>
+      </header>
+      <div class="wrap">
+        <div class="content articleText-Wrap">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item"><a href="">首頁</a></li>
+            <li class="breadcrumbs-item"><a href="">最新消息</a></li>
+            <li class="breadcrumbs-item"><a href="">優惠資訊 </a></li>
+          </ul>
+          <div class="articleText-left">
+            <p class="articleText-title">自主防疫是什麼？我不是同住家人需要自主防疫嗎？ </p>
+            <p class="articleText-date">2022/05/17</p>
+            <div class="fb-like" data-action="like" data-href="https://www.facebook.com/14holidays/" data-layout="button" data-share="true" data-size="small" data-width></div>
+            <div class="articleText-pic"><img alt src="https://i.ibb.co/FDS0gHB/Rectangle-1.png"></div>
+            <div class="articleText-fs" @click="addFS += 0.1 "><img alt="" src="https://ppt.cc/fbOrLx@.png"><span>放大閱讀字體</span></div>
+            <div class="articleText-subTitle" :style="{fontSize:addFS + 'em'}"><span> （前言）新冠肺炎疫情在台灣正在如火如荼發燒中，人心惶惶之餘，我們還能做什麼來降低我們對covid-19的恐懼呢？我想，就從因應對策開始了解吧！至少可以對預防、確診後續、密切接觸處理有基礎的認識，但政策日新月異，許多人也對滾動式調整感到疲憊，今天我們就來談談「自主防疫」是什麼吧！</span></div>
+            <div class="articleText-Text"><span :style="{fontSize:addFS + 'em'}">（內文）根據指揮中心於2022/05/16發布的最新防疫政策規定，確診者維持7天居家隔離＋7天自主健康管理，而同住家人及親友則遵循兩原則<br><br>一、【0+7】完成3劑疫苗接種者得：免居家隔離，但需配合7天自主防疫，期間應遵守自主防疫規範，如需外出工作及採買生活必需品，需有2日內家用抗原快篩陰性證明，有症狀時建議在家休息，並以快篩試劑進行快篩。<br><br>二、【3+4】未完成3劑疫苗接種者：維持「3天居家隔離+4天自主防疫」，隔離期間應留在家中，禁止外出，於隔離期滿後繼續4天自主防疫，另須配合於隔離期間完成匡列時進行快篩，自主防疫期間，如需外出工作及採買生活必需品，需有2日內家用抗原快篩陰性證明，有症狀時建議在家休息，並以快篩試劑進行快篩。</span><br><br>
+              <div class="articleText-Text-line-wrap"><img alt="" src="https://ppt.cc/fhuHTx@.png"><span class="articleText-Text-line"></span></div><span class="articleText-Text-line-text">（結語）面臨疫情高峰期，最辛苦的醫護人員也正在為台灣的民眾們站在第一線付出，目前政策雖變化動盪，我們能做的就是盡量遵守防疫政策，並保護好自身的健康安全，14天防疫假期將隨時為您更新與整理最新的防疫政策資訊，讓我們一起度過這次的難關！</span>
+              <div class="articleText-Text-line-wrap"><span class="articleText-Text-line"></span><img alt="" src="https://ppt.cc/fSSY7x@.png"></div>
+              <div class="articleText-about"><img alt="" src="https://ppt.cc/fpWKcx@.png"><span>相關文章：<a href="">居家隔離、居家檢疫、自主健康管理防疫旅館懶人包</a></span></div>
+              <div class="article-class article-class-line">延伸閱讀</div>
+              <ul class="articleText-more"> 
+                <li class="articleText-item"> <a href="">2021居家隔離費用與補助申請</a></li>
+                <li class="articleText-item"> <a href="">快篩試劑使用步驟？快篩試劑販售店鋪查詢app?</a></li>
+              </ul>
+              <div class="articleText-tabs"><span>文章關鍵字：</span><a href="">居家隔離</a><a href="">自主健康管理</a><a href="">防疫旅館</a><a href="">計程車</a><a href="">優惠 </a></div>
+            </div>
+          </div>
+          <div class="articleText-right">
+            <div class="article-class article-class-line">熱門文章</div>
+            <ul class="articleText-right-list">
+              <li class="articleText-right-item"><a href="" class="articleText-right-item-link"> <span class="articleText-right-item-num">1.</span>
+                  <sapn class="articleText-right-item-text">自主防疫是什麼？我不是同住家人需要自主防疫嗎？</sapn></a></li>
+              <li class="articleText-right-item"><a href="" class="articleText-right-item-link"> <span class="articleText-right-item-num">2.</span>
+                  <sapn class="articleText-right-item-text">自主防疫是什麼？我不是同住家人需要自主防疫嗎？</sapn></a></li>
+              <li class="articleText-right-item"><a href="" class="articleText-right-item-link"> <span class="articleText-right-item-num">3.</span>
+                  <sapn class="articleText-right-item-text">自主防疫是什麼？我不是同住家人需要自主防疫嗎？</sapn></a></li>
+              <li class="articleText-right-item"><a href="" class="articleText-right-item-link"> <span class="articleText-right-item-num">4.</span>
+                  <sapn class="articleText-right-item-text">自主防疫是什麼？我不是同住家人需要自主防疫嗎？</sapn></a></li>
+            </ul>
+          </div>
+          <div class="articleText-footer"> 
+            <div class="activity"><img alt src="https://i.ibb.co/FDS0gHB/Rectangle-1.png"></div>
+            <div class="activity"><img alt src="https://i.ibb.co/FDS0gHB/Rectangle-1.png"></div>
+          </div>
+        </div>
+      </div>
+      <script>
+        new Vue({
+            el:'.wrap',
+            data(){
+                return{
+                    addFS:1,
+                }
+            }
+        })
+        
+                
+        
+                
+                    
+      </script>
+      <!-- <!------------------------- footer--------------------------->
+      <footer class="footer">
+        <div class="content">
+          <div class="footer_main">
+            <div class="footer_left"><img alt src="https://ppt.cc/fcaQ9x@.png" class="footer_left_pic"><span class="footer_left_desc">您最佳的防疫旅館首選</span>
+              <ul class="footer_left_link_wrap">
+                <li class="footer_left_link"><a href="https://www.messenger.com/t/103521468250543/?messaging_source=source&amp;pages&amp;message_shortlink"><img alt src="../assets/footer/message_icon.png" class="footer_left_icon"></a></li>
+                <li class="footer_left_link"><a href="https://line.me/ti/p/@643ibjqd"><img alt src="../assets/footer/line_icon.png" class="footer_left_icon"></a></li>
+                <li class="footer_left_link"><a href><img alt src="../assets/footer/wechat_icon.png" class="footer_left_icon"></a></li>
+                <li class="footer_left_link"><a href><img alt src="../assets/footer/link_icon.png" class="footer_left_icon"></a></li>
+              </ul>
+            </div>
+            <div class="footer_right">
+              <ul class="footer_right_list">
+                <li class="footer_right_title">14Holidays</li>
+                <li class="footer_right_link"><a href="./contactus.html">關於我們</a></li>
+                <li class="footer_right_link"><a href="./index.html#taipei">房型介紹</a></li>
+                <li class="footer_right_link"><a href="./article.html">最新消息</a></li>
+              </ul>
+              <ul class="footer_right_list">
+                <li class="footer_right_title">防疫相關</li>
+                <li class="footer_right_link"><a href="./article.html">防疫補助</a></li>
+                <li class="footer_right_link"><a href="./index.html#news">防疫全攻略</a></li>
+                <li class="footer_right_link"><a href="./Q&amp;A.html">防疫旅館Q&A</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer_copy">Copyright © 2022 14天防疫假期|合法防疫旅館</div>
+        <div class="footer_top" aria-controls="footer_top_collapse" data-bs-toggle="collapse" href="#footer_top_collapse" role="button" aria-expanded="true"><img alt="" src="https://i.ibb.co/J260wBF/2022-06-01-8-23-08.png"></div>
+        <div class="footer_top_collapse collapse show" id="footer_top_collapse">
+          <div class="footer_top_collapse_link"><a href="#nav" class="footer_top_collapse_link_icon"> <img alt="" src="https://i.ibb.co/jHhHZXn/2022-06-01-8-23-01.png"></a></div>
+          <div class="footer_top_collapse_link"><a href="https://line.me/ti/p/@643ibjqd" class="footer_top_collapse_link_icon"><img alt="" src="https://i.ibb.co/W0Nt87s/2022-06-01-8-22-47.png"></a></div>
+          <div class="footer_top_collapse_link"><a href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F103521468250543%2F%3Fmessaging_source%3Dsource%26pages%26message_shortlink" class="footer_top_collapse_link_icon"><img alt="" src="https://i.ibb.co/nPH3xZZ/2022-06-01-8-22-28.png"></a></div>
+        </div>
+        <div class="footer_top_move">
+          <div class="footer_top_move_left"><a href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F103521468250543%2F%3Fmessaging_source%3Dsource%26pages%26message_shortlink" class="footer_top_move_icon"><img alt="" src="https://i.ibb.co/nPH3xZZ/2022-06-01-8-22-28.png"></a><a href="https://line.me/ti/p/@643ibjqd" class="footer_top_move_icon"><img alt="" src="https://i.ibb.co/W0Nt87s/2022-06-01-8-22-47.png"></a><a href="" class="footer_top_move_icon"> <img alt="" src="https://i.ibb.co/gMsCMTz/Group-155.png"></a></div>
+          <div class="footer_top_move_right"><a href="" class="addFans"> <span>加入好友</span></a><a href="#nav">  <img alt="" src="https://i.ibb.co/rcr1XYP/Group-165.png"></a></div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
